@@ -1,0 +1,88 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cyrillic To Latin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-11 00:37+0000\n"
+"PO-Revision-Date: 2017-11-11 10:43+0000\n"
+"Last-Translator: dlesendric <darko.lesendric@gmail.com>\n"
+"Language-Team: English (United States)\n"
+"Language: en-US\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. Name of the plugin
+msgid "Cyrillic To Latin"
+msgstr "Cyrillic To Latin"
+
+#. Description of the plugin
+msgid "Convert Serbian cyrillic to Serbian latin translation files."
+msgstr "Convert Serbian cyrillic to Serbian latin translation files."
+
+#. Author of the plugin
+msgid "Darko Lesendric"
+msgstr "Darko Lesendric"
+
+#. Author URI of the plugin
+msgid "darko.lesendric@gmail.com"
+msgstr "mailto:darko.lesendric@gmail.com"
+
+msgid "sr_RS.po"
+msgstr "Default Serbian translation file"
+
+msgid "admin-network-sr_RS.po"
+msgstr "Default admin Serbian translation file"
+
+msgid "admin-sr_RS.po"
+msgstr "Default admin Serbian translation file"
+
+msgid "continents-cities-sr_RS.po"
+msgstr "Default admin Serbian translation file"
+
+msgid "loco"
+msgstr "Loco translate folder"
+
+msgid "themes"
+msgstr "Themes folder"
+
+msgid "welcome title"
+msgstr "Convert Serbian cyrillic to latin "
+
+msgid "welcome description"
+msgstr ""
+"Warning: This plugin is only for Serbian language files, don't use this "
+"plugin for any other languages, because it's programmed only for cyrillic.\n"
+"To start conversion, you should firstly have installed Serbian translation "
+"files from official wordpress language repository.\n"
+"For conversion, firstly find your file which you want to convert, and click "
+"button \"Convert\"\n"
+"The plugin stores backup of converted files, so you can always return to the "
+"previous version."
+
+msgid "welcome notice"
+msgstr ""
+"After you download or update fresh new translation file, you should probably "
+"convert that file again..."
+
+msgid "woocommerce-sr_RS.po"
+msgstr "Woocommerce translation file"
+
+msgid "file"
+msgstr "File"
+
+msgid "description"
+msgstr "Description"
+
+msgid "action"
+msgstr "Action"
+
+msgid "convert"
+msgstr "Convert"
+
+msgid "rollback"
+msgstr "Rollback"
+
+msgid "convert cyrillic"
+msgstr "Convert Cyrillic"

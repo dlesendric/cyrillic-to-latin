@@ -1,0 +1,88 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-11 00:37+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#. Name of the plugin
+msgid "Cyrillic To Latin"
+msgstr ""
+
+#. Description of the plugin
+msgid "Convert Serbian cyrillic to Serbian latin translation files."
+msgstr ""
+
+#. Author of the plugin
+msgid "Darko Lesendric"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "darko.lesendric@gmail.com"
+msgstr ""
+
+msgid "sr_RS.po"
+msgstr ""
+
+msgid "admin-network-sr_RS.po"
+msgstr ""
+
+
+msgid "admin-sr_RS.po"
+msgstr ""
+
+msgid "continents-cities-sr_RS.po"
+msgstr ""
+
+msgid "loco"
+msgstr ""
+
+msgid "themes"
+msgstr ""
+
+msgid "welcome title"
+msgstr ""
+
+
+msgid "welcome description"
+msgstr ""
+
+
+msgid "welcome notice"
+msgstr ""
+
+msgid "woocommerce-sr_RS.po"
+msgstr ""
+
+msgid "file"
+msgstr ""
+
+msgid "description"
+msgstr ""
+
+msgid "action"
+msgstr ""
+
+msgid "convert"
+msgstr ""
+
+msgid "rollback"
+msgstr ""
+
+msgid "convert cyrillic"
+msgstr ""
+
+msgid "plugin summary"
+msgstr ""
+
+msgid "support developer"
+msgstr ""

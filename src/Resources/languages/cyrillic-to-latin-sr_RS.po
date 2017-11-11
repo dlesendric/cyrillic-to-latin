@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cyrillic To Latin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-11 11:01+0000\n"
+"PO-Revision-Date: 2017-11-11 12:05+0000\n"
+"Last-Translator: dlesendric <darko.lesendric@gmail.com>\n"
+"Language-Team: Serbian\n"
+"Language: sr-RS\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+msgid "plugin summary"
+msgstr ""
+"Ovaj plugin je kompletno besplatan i jedino ako ti se dopada i želiš "
+"podržati moj rad možeš mi donirati novac putem linka -> "
+
+msgid "support developer"
+msgstr "Doniraj preko PayPal-a"
+
+#. Name of the plugin
+msgid "Cyrillic To Latin"
+msgstr "Ćirilica u latinicu"
+
+#. Description of the plugin
+msgid "Convert Serbian cyrillic to Serbian latin translation files."
+msgstr "Konvertuj jezičke fajlove iz Srpske ćirilice u latinicu"
+
+#. Author of the plugin
+msgid "Darko Lesendric"
+msgstr "Darko Lesendrić"
+
+#. Author URI of the plugin
+msgid "darko.lesendric@gmail.com"
+msgstr "mailto:darko.lesendric@gmail.com"
+
+msgid "sr_RS.po"
+msgstr "Glavni administratorski jezički fajl. "
+
+msgid "admin-network-sr_RS.po"
+msgstr "Glavni administratorski jezički fajl. "
+
+msgid "admin-sr_RS.po"
+msgstr "Glavni administratorski jezički fajl. "
+
+msgid "continents-cities-sr_RS.po"
+msgstr ""
+"Glavni administratorski jezički fajl, odnosi se na gradove i kontinente."
+
+msgid "loco"
+msgstr "Folder za loko translate"
+
+msgid "themes"
+msgstr "Folder tema"
+
+msgid "welcome title"
+msgstr "Konvertovanje ćirilce u latinicu"
+
+msgid "welcome description"
+msgstr ""
+"Za konverziju neophodno je da prvenstveno izaberete koji language (jezični) "
+"fajl želite da konvertujete.\n"
+"Konverzija se obavlja klikom na dugme \"Konvertuj\".\n"
+"Plugin automatski sačuvava fajlove .po i .mo ekstenzije."
+
+msgid "welcome notice"
+msgstr ""
+"Napomena: Prilikom ažuriranja jezika, verovatno ćete morati da odradite "
+"ponovo konverziju."
+
+msgid "woocommerce-sr_RS.po"
+msgstr "WooCommerce jezički fajl."
+
+msgid "file"
+msgstr "Fajl"
+
+msgid "description"
+msgstr "Opis"
+
+msgid "action"
+msgstr "Akcija"
+
+msgid "convert"
+msgstr "Konvertuj"
+
+msgid "rollback"
+msgstr "Vrati"
+
+msgid "convert cyrillic"
+msgstr "Konvertuj Ćirlicu"

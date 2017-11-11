@@ -1,0 +1,19 @@
+{
+    "name": "dlesendric/cyrillic_to_latin",
+    "description": "Converts cyrillic .po files to latin",
+    "type": "library",
+    "autoload": {
+        "psr-4": { "DLS\\": "src/" }
+    },
+    "require": {
+        "sepia/po-parser": "^4.2",
+        "symfony/console": "^3.3"
+    },
+    "authors": [
+        {
+            "name": "Darko Lesendric",
+            "email": "darko.lesendric@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
