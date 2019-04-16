@@ -1,4 +1,0 @@
-<Files console.php>
-    Order Deny,Allow
-    Deny from all
-</Files>

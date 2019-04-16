@@ -4,80 +4,36 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6cc82c81b522a6bd46763899ebf6d767",
+    "content-hash": "7080e0a610ba8a07cdbf505222ba097f",
     "packages": [
         {
-            "name": "psr/log",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/log.git",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Log\\": "Psr/Log/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for logging libraries",
-            "homepage": "https://github.com/php-fig/log",
-            "keywords": [
-                "log",
-                "psr",
-                "psr-3"
-            ],
-            "time": "2016-10-10T12:19:37+00:00"
-        },
-        {
             "name": "sepia/po-parser",
-            "version": "4.2.2",
+            "version": "5.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/raulferras/PHP-po-parser.git",
-                "reference": "8a6bbcd4a231b19e1b052c1c46b0fe2935331afe"
+                "reference": "ab59aeed9cf3a125caba313dd8d1e9124d3ba9c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/raulferras/PHP-po-parser/zipball/8a6bbcd4a231b19e1b052c1c46b0fe2935331afe",
-                "reference": "8a6bbcd4a231b19e1b052c1c46b0fe2935331afe",
+                "url": "https://api.github.com/repos/raulferras/PHP-po-parser/zipball/ab59aeed9cf3a125caba313dd8d1e9124d3ba9c0",
+                "reference": "ab59aeed9cf3a125caba313dd8d1e9124d3ba9c0",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "php": ">=5.3",
+                "symfony/polyfill-mbstring": "^1"
             },
             "require-dev": {
-                "phpunit/phpunit": "3.7.*",
-                "squizlabs/php_codesniffer": "1.5.*"
+                "fzaninotto/faker": "^1.7",
+                "phpunit/phpunit": "^4.0",
+                "squizlabs/php_codesniffer": "^2.0"
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Sepia": "src/"
+                "psr-4": {
+                    "Sepia\\PoParser\\": "src/",
+                    "Sepia\\Test\\": "tests/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -99,144 +55,20 @@
                 "i18n",
                 "po"
             ],
-            "time": "2017-09-15T10:55:43+00:00"
-        },
-        {
-            "name": "symfony/console",
-            "version": "v3.3.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/console.git",
-                "reference": "116bc56e45a8e5572e51eb43ab58c769a352366c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/116bc56e45a8e5572e51eb43ab58c769a352366c",
-                "reference": "116bc56e45a8e5572e51eb43ab58c769a352366c",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.5.9|>=7.0.8",
-                "symfony/debug": "~2.8|~3.0",
-                "symfony/polyfill-mbstring": "~1.0"
-            },
-            "conflict": {
-                "symfony/dependency-injection": "<3.3"
-            },
-            "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/config": "~3.3",
-                "symfony/dependency-injection": "~3.3",
-                "symfony/event-dispatcher": "~2.8|~3.0",
-                "symfony/filesystem": "~2.8|~3.0",
-                "symfony/process": "~2.8|~3.0"
-            },
-            "suggest": {
-                "psr/log": "For using the console logger",
-                "symfony/event-dispatcher": "",
-                "symfony/filesystem": "",
-                "symfony/process": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Console\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Console Component",
-            "homepage": "https://symfony.com",
-            "time": "2017-10-02T06:42:24+00:00"
-        },
-        {
-            "name": "symfony/debug",
-            "version": "v3.3.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/debug.git",
-                "reference": "eb95d9ce8f18dcc1b3dfff00cb624c402be78ffd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/eb95d9ce8f18dcc1b3dfff00cb624c402be78ffd",
-                "reference": "eb95d9ce8f18dcc1b3dfff00cb624c402be78ffd",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.5.9|>=7.0.8",
-                "psr/log": "~1.0"
-            },
-            "conflict": {
-                "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
-            },
-            "require-dev": {
-                "symfony/http-kernel": "~2.8|~3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Debug\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Debug Component",
-            "homepage": "https://symfony.com",
-            "time": "2017-10-02T06:42:24+00:00"
+            "time": "2018-07-27T14:37:11+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.6.0",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296"
+                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
-                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
+                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
                 "shasum": ""
             },
             "require": {
@@ -248,7 +80,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6-dev"
+                    "dev-master": "1.11-dev"
                 }
             },
             "autoload": {
@@ -282,7 +114,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-10-11T12:05:26+00:00"
+            "time": "2019-02-06T07:57:58+00:00"
         }
     ],
     "packages-dev": [],

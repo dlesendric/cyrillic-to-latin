@@ -3,7 +3,7 @@
  * Plugin Name: Cyrillic To Latin
  * Plugin URI:
  * Description: Convert Serbian cyrillic to Serbian latin translation files.
- * Version:     1.0
+ * Version:     1.0.1
  * Author:      Darko Lesendric
  * Author URI:  darko.lesendric@gmail.com
  * License:     GPL-2.0+

@@ -1,0 +1,116 @@
+[
+    {
+        "name": "symfony/polyfill-mbstring",
+        "version": "v1.11.0",
+        "version_normalized": "1.11.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-mbstring.git",
+            "reference": "fe5e94c604826c35a32fa832f35bd036b6799609"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
+            "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "suggest": {
+            "ext-mbstring": "For best performance"
+        },
+        "time": "2019-02-06T07:57:58+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.11-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Mbstring\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill for the Mbstring extension",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "mbstring",
+            "polyfill",
+            "portable",
+            "shim"
+        ]
+    },
+    {
+        "name": "sepia/po-parser",
+        "version": "5.1.6",
+        "version_normalized": "5.1.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/raulferras/PHP-po-parser.git",
+            "reference": "ab59aeed9cf3a125caba313dd8d1e9124d3ba9c0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/raulferras/PHP-po-parser/zipball/ab59aeed9cf3a125caba313dd8d1e9124d3ba9c0",
+            "reference": "ab59aeed9cf3a125caba313dd8d1e9124d3ba9c0",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3",
+            "symfony/polyfill-mbstring": "^1"
+        },
+        "require-dev": {
+            "fzaninotto/faker": "^1.7",
+            "phpunit/phpunit": "^4.0",
+            "squizlabs/php_codesniffer": "^2.0"
+        },
+        "time": "2018-07-27T14:37:11+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Sepia\\PoParser\\": "src/",
+                "Sepia\\Test\\": "tests/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Raúl Ferràs",
+                "email": "raul.ferras@gmail.com",
+                "role": "developer"
+            }
+        ],
+        "description": "Gettext *.PO file parser for PHP.",
+        "homepage": "https://github.com/raulferras/PHP-po-parser",
+        "keywords": [
+            "gettext",
+            "i10n",
+            "i18n",
+            "po"
+        ]
+    }
+]

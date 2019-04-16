@@ -43,6 +43,9 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <a class="button button-primary" href="?page=cyrillic-to-latin&revert=<?php echo urlencode($lang['revert_path']);?>"><?php _e('rollback', 'cyrillic-to-latin');?></a>
                     <?php else: ?>
                         <a class="button button-primary" href="?page=cyrillic-to-latin&convert=<?php echo urlencode($lang['path']);?>"><?php _e('convert', 'cyrillic-to-latin');?></a>
+	                <?php endif;?>
+                    <?php if($lang['revert']):?>
+                        <a class="button button-primary" href="?page=cyrillic-to-latin&reset=<?php echo urlencode($lang['revert_path']);?>"><?php _e('reset', 'cyrillic-to-latin');?></a>
                     <?php endif;?>
                 <?php endif;?>
             </td>
