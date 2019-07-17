@@ -6,8 +6,7 @@
         "psr-4": { "DLS\\": "src/" }
     },
     "require": {
-        "sepia/po-parser": "^4.2",
-        "symfony/console": "^3.3"
+        "sepia/po-parser": "^5.1"
     },
     "authors": [
         {

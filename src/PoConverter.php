@@ -3,9 +3,10 @@
 namespace DLS;
 
 
-use Sepia\FileHandler;
+use Sepia\PoParser\SourceHandler\FileSystem;
 use DLS\MoConverter;
-use Sepia\PoParser;
+use Sepia\PoParser\PoCompiler;
+use Sepia\PoParser\Parser;
 
 class PoConverter
 {
@@ -110,48 +111,27 @@ class PoConverter
 		if('po' !== pathinfo($this->file,PATHINFO_EXTENSION)){
 			throw new \Exception('File is not .po extension');
 		}
-		$handler = new FileHandler($this->file);
-		$parser = new PoParser($handler);
-		$entries  = $parser->parse();
-		foreach ($entries as $msgid=>$entry){
-			if(empty($entry['msgid']) || !isset($entry['msgstr']) || empty($entry['msgstr'])){
-				continue;
-			}
-			if(is_array($entry['msgstr'])){
-				$i = 0;
-				$to_save = array();
-				foreach ($entry['msgstr'] as $str){
-					if($this->save){
-						$entry['msgstr'][$i] = $this->replaceChars($str);
-						$to_save[] = $entry;
-					}
-					else{
-						echo $str.' ===> '.$this->replaceChars($str).PHP_EOL;
-					}
-					$i++;
-				}
-				if($this->save && !empty($to_save)){
-					$parser->setEntry($msgid,$entry,false);
-				}
-			}
-			if(is_string($entry['msgstr'])){
-				if($this->save){
-					$entry['msgstr'] = $this->replaceChars($entry['msgstr']);
-					$parser->setEntry($msgid,$entry,false);
-				}
-				else{
-					echo $entry['msgstr'].' ===> '.$this->convert($entry['msgstr']).PHP_EOL;
-				}
+		$handler = new FileSystem($this->file);
+		$parser  = new Parser($handler);
+		$catalog = $parser->parse();
+
+		foreach ($catalog->getEntries() as $entry){
+			$msgstr = $entry->getMsgStr();
+			if ($msgstr) {
+				$entry->setMsgStr($this->replaceChars($msgstr));
+			} else {
+				$entry->setMsgStrPlurals(array_map(array('DLS\PoConverter', 'replaceChars'), $entry->getMsgStrPlurals()));
 			}
 		}
+
 		if($this->save){
-			$parser->writeFile($this->file);
+			$compiler = new PoCompiler();
+			$podata = $compiler->compile($catalog);
+			$handler->save($podata);
 			$writer = new MoConverter($this->file);
 			$writer->convert();
 		}
 	}
-
-
 
 	private function replaceChars($string){
 		$chars = preg_split('//u', $string, -1);

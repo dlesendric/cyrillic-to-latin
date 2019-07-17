@@ -11,6 +11,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 class WP_CyrillicToLatin
 {
 
+	private $version;
+
+
+	public function __construct()
+	{
+		$this->version = get_bloginfo('version');
+	}
+
 	private $abs_path = ABSPATH.'/wp-content/languages/';
 	/**
 	 * Start the plugin
@@ -48,6 +56,10 @@ class WP_CyrillicToLatin
 			$file = urldecode($_GET['revert']);
 			$this->revertFile($file);
 		}
+		elseif(array_key_exists('reset', $_GET)){
+			$file = urldecode($_GET['reset']);
+			$this->reset($file);
+		}
 		else{
 			$this->startPage();
 		}
@@ -81,12 +93,14 @@ class WP_CyrillicToLatin
 		$file = realpath($file);
 		$this->createBackupFile($file);
 		$backup_message = '<h3>Kreiran je backup</h3>';
-		$backup_message.= '<p>'.str_replace('.po','.bak.po',$file).'</p>';
-		$backup_message.= '<p>'.str_replace('.po','.bak.mo',$file).'</p>';
+		$backup_message.= '<p>'.str_replace('.po','.'.$this->getSuffix().'.po',$file).'</p>';
+		$backup_message.= '<p>'.str_replace('.po','.'.$this->getSuffix().'.mo',$file).'</p>';
 		$this->showMessage($backup_message, 'info');
 		$poConverter = new PoConverter($file);
 		try{
 			$poConverter->convert();
+			$moConverter = new MoConverter($file);
+			$moConverter->convert();
 			$this->showMessage('Uspešno konvertovano, osvežite stranicu da vidite promene.', 'success');
 		}
 		catch (\Exception $e){
@@ -96,6 +110,24 @@ class WP_CyrillicToLatin
 		$this->startPage();
 	}
 
+
+	public function reset($file){
+		try{
+			unlink($file);
+			$this->startPage();
+
+		}catch (\Exception $e){
+			$this->showMessage($e->getMessage());
+		}
+	}
+
+	/**
+	 * @return string
+	 */
+	private function getSuffix(){
+		$suffix = str_replace('.', '_', $this->version).'_bak';
+		return $suffix;
+	}
 	/**
 	 * Creates backup of file which are preparing for converting
 	 * Files are saved exp: _RS.po -> _RS.bak.po
@@ -103,9 +135,13 @@ class WP_CyrillicToLatin
 	 */
 	private function createBackupFile($file)
 	{
+		if(!file_exists($file)){
+			$this->startPage();
+			return;
+		}
 		try{
-			copy($file,str_replace('_RS.po','_RS.bak.po',$file));
-			copy(str_replace('_RS.po','_RS.mo',$file),str_replace('_RS.po','_RS.bak.mo',$file));
+			copy($file,str_replace('_RS.po','_RS.'.$this->getSuffix().'.po',$file));
+			copy(str_replace('_RS.po','_RS.mo',$file),str_replace('_RS.po','_RS.'.$this->getSuffix().'.mo',$file));
 		} catch (\Exception $e){
 			$this->showMessage($e->getMessage());
 		}
@@ -116,12 +152,18 @@ class WP_CyrillicToLatin
 	 * @param string $file
 	 */
 	private function revertFile($file){
+		if(!file_exists($file)){
+			$this->startPage();
+			return;
+		}
 		try{
 			$file = realpath($file);
-			copy($file,str_replace('.bak.po','.po',$file));
-			copy(str_replace('.bak.po','.bak.mo',$file),str_replace('.bak.po','.mo',$file));
+			copy($file,str_replace('.'.$this->getSuffix(),'',$file));
+			$moFile = str_replace('.po', '.mo', $file);
+			$originalMo = str_replace('.'.$this->getSuffix().'.po', '.mo', $file);
+			copy($moFile,$originalMo);
 			unlink($file);
-			unlink(str_replace('.bak.po','.bak.mo',$file));
+			unlink($moFile);
 			$this->showMessage('Uspešno vraćeni fajlovi...', 'success');
 		} catch (\Exception $e){
 			$this->showMessage($e->getMessage());
@@ -161,7 +203,7 @@ class WP_CyrillicToLatin
 			}
 			$dir = dirname($item['path']);
 			$base = basename($file);
-			$revert_path = $dir.DIRECTORY_SEPARATOR.str_replace('.po','.bak.po',$base);
+			$revert_path = $dir.DIRECTORY_SEPARATOR.str_replace('.po','.'.$this->getSuffix().'.po',$base);
 			$item['revert'] = file_exists($revert_path);
 			$item['revert_path'] = $revert_path;
 			$files[] = $item;
